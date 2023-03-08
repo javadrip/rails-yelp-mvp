@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # TODO: refactor >>> resources :restaurants, only: [:index]
 
   resources :restaurants do
-    resources :reviews, only: [:new]
+    resources :reviews, only: %i[new create]
   end
   # Defines the root path route ("/")
   # root "articles#index"

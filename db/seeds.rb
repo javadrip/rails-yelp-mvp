@@ -15,11 +15,11 @@
 #   )
 # end
 
-Restaurant.all.each do |r|
-  rand(1..5).times do
-    r.reviews.create!(
-      rating: rand(1..5),
-      content: Faker::Restaurant.review
-    )
-  end
-end
+# Restaurant.all.each do |r|
+#   rand(1..5).times do
+#     r.reviews.create!(
+#       rating: rand(1..5),
+#       content: Faker::Restaurant.review
+#     )
+#   end
+# end
