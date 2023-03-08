@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'restaurants/index'
-  get 'restaurants/show'
-  get 'restaurants/new'
+  get 'reviews/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :restaurants, only: [:index]
+  # TODO: refactor >>> resources :restaurants, only: [:index]
+
+  resources :restaurants do
+    resources :reviews, only: [:new]
+  end
   # Defines the root path route ("/")
   # root "articles#index"
 end
